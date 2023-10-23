@@ -26,7 +26,7 @@
             }
         },
         computed: {
-            getTitle() {
+            customTitle() {
                 return this.title ?? 'Counter';
             },
             squareCounter() {
@@ -38,7 +38,7 @@
 </script>
 
 <template>
-    <h2>{{ getTitle }}</h2>
+    <h2>{{ customTitle }}</h2>
     <p>{{ counter }} <sup>2</sup> = {{ squareCounter }}</p>
 
     <div>

@@ -11,13 +11,20 @@
         methods: {
             async getAnswer() {
                 this.answer = 'Thinking...'
-                const { answer, image } = await fetch('https://yesno.wtf/api').then((res) => res.json());
-                this.answer = answer;
-                this.image = image;
+                try {
+                    const { answer, image } = await fetch('https://yesno.wtf/api').then((res) => res.json());
+                    this.answer = answer;
+                    this.image = image;
+                } catch (error) {
+                    this.answer = 'Ask later'
+                    this.image = null;
+                }
             }
         },
         watch: {
             question(value) {
+                console.log({ value });
+
                 this.isValidQuestion = false;
                 if (!value.endsWith('?')) return;
                 this.isValidQuestion = true;
