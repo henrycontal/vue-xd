@@ -25,6 +25,8 @@
                 if (this.question.toLocaleLowerCase().includes('enrique')) {
                     this.image = 'https://static.independent.co.uk/s3fs-public/thumbnails/image/2013/01/24/12/v2-cute-cat-picture.jpg?width=1200';
                     this.answer = 'No matter what did you ask, he always love you darling';
+                } else if (this.question.toLocaleLowerCase().includes('daniel')) {
+                    this.answer = 'He don\'t deserve you darling'
                 } else {
                     this.getAnswer();
                 }
