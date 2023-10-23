@@ -22,7 +22,7 @@
                 if (!value.endsWith('?')) return;
                 this.isValidQuestion = true;
 
-                if (this.question.toLocaleLowerCase().includes('enrique')) {
+                if (this.question.toLocaleLowerCase().includes('enrique') || this.question.toLocaleLowerCase().includes('judio')) {
                     this.image = 'https://static.independent.co.uk/s3fs-public/thumbnails/image/2013/01/24/12/v2-cute-cat-picture.jpg?width=1200';
                     this.answer = 'No matter what did you ask, he always love you darling';
                 } else if (this.question.toLocaleLowerCase().includes('daniel')) {
